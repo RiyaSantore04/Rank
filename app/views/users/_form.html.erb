@@ -1,0 +1,34 @@
+<%= form_with model: @user do |form| %>  
+<div>
+<%= form.label :First_name %><br>
+<%= form.text_field  :first_name%>	
+</div>
+
+<div>
+	<%= form.label :Last_name %><br>
+	<%= form.text_field :last_name %>
+</div>
+
+<div>
+	<%= form.label :Contact %><br>
+	<%= form.text_field :contact%>
+</div>
+
+<div>
+	<%= form.label :Rank %><br>
+	<%= form.text_field :rank %>
+</div>
+
+<div>
+	 <%= form.label :Status %><br>
+  <%#= form.select :activestatus, ['active','inactive'], selected: 'active'%>
+  <%= form.select :activestatus, options_for_select([['Active', 'true'], ['Inactive', 'false']], (@user.activestatus)), { include_blank: 'None'}, class: "" %>
+</div>
+
+<div>
+	<%= form.submit %>
+</div>
+
+
+
+ <% end %>

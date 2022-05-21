@@ -1,0 +1,24 @@
+<h1> Hello Users</h1>
+
+<ul>
+	<% @users.each do |user| %>
+	<li>
+		<%= link_to user.first_name, user  %>&nbsp; 	&nbsp; &nbsp; 
+	    <%= user.activestatus%>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to "New User", new_user_path %>
+
+
+<p> Top Three </p>
+
+<ul>
+	<% @topers.each do |user| %>
+	<li>
+		<%= link_to user.first_name, user %>
+	</li>
+	<% end %>
+</ul>
+
